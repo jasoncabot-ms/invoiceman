@@ -30,3 +30,15 @@ jobs:
       with:
         name: release-${{ github.sha }}
         path: dist
+    - name: 'Login via Azure CLI'
+      uses: Azure/actions/login@master
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: 'Run Azure Functions Action'
+      uses: Azure/functions-action@v1
+      id: publish
+      with:
+        app-name: invoiceman
+        package: './dist/'
+    
+
