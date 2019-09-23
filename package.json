@@ -1,0 +1,30 @@
+{
+  "name": "invoiceman",
+  "version": "1.0.0",
+  "description": "Finds the status of any invoices across Azure subscriptions and tenants",
+  "main": "index.js",
+  "devDependencies": {
+    "@azure/functions": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "copy-webpack-plugin": "^5.0.3",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@azure/arm-billing": "^2.2.0",
+    "@azure/ms-rest-nodeauth": "^2.0.5"
+  },
+  "scripts": {
+    "webpack": "webpack --watch --config webpack.dev.js",
+    "func": "func start --prefix ./dist --cors http://localhost:3000",
+    "start": "npm-run-all clean --parallel webpack func",
+    "clean": "rm -rf ./dist/*",
+    "build": "webpack --config webpack.prod.js",
+    "package": "npm-run-all clean build"
+  },
+  "private": true,
+  "author": "Jason Cabot",
+  "license": "ISC"
+}
