@@ -39,6 +39,7 @@ jobs:
       id: publish
       with:
         app-name: invoiceman
-        package: './dist/'
-    
+        package: './dist'
+    - name: 'Print details'
+      run: echo ${{ steps.publish.outputs.app-url }}
 
