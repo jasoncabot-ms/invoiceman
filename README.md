@@ -77,7 +77,6 @@ In order for the Reader to access the invoices in the Generator, you must create
 * Navigate to [the Azure Portal](https://portal.azure.com)
 * [Azure Active Directory ➝ App registrations ➝ New registration](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
 
-    > Supported account types should be *Accounts in any organizational directory (Any Azure AD directory - Multitenant)*
 * [Cost Management + Billing ➝ Select subscription ➝ Access control (IAM) ➝ Role assignments ➝ Add (role assignment)](https://portal.azure.com/#blade/Microsoft_Azure_Billing/BillingMenuBlade/Subscriptions/id/)
     * Role: **Billing Reader**
     * Assign access to: **Azure AD User, group, or service principal**
@@ -87,3 +86,5 @@ In order for the Reader to access the invoices in the Generator, you must create
     > This allows users/groups with subscription-level access to download invoices. 
     > 
     > This will allow the service principal to view personal information (name, email, and addresses) contained inside the invoices. [View the privacy statement](https://privacy.microsoft.com/en-gb/privacystatement).
+* [Azure Active Directory ➝ App registrations ➝ Certificates & secrets ➝ New client secret](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) 
+
