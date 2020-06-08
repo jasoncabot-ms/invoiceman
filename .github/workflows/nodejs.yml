@@ -30,8 +30,8 @@ jobs:
       with:
         name: release-${{ github.sha }}
         path: dist
-    - name: 'Login via Azure CLI'
-      uses: Azure/actions/login@master
+    - name: Azure Login
+      uses: Azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: 'Run Azure Functions Action'
