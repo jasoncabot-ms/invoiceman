@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@azure/arm-billing": "^2.2.0",
-    "@azure/ms-rest-nodeauth": "^2.0.5"
+    "@azure/ms-rest-nodeauth": "^3.0.8"
   },
   "scripts": {
     "webpack": "webpack --watch --config webpack.dev.js",
